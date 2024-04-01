@@ -2,7 +2,6 @@
   import { fade } from "svelte/transition";
   let visible = false;
   let text = "";
-
 </script>
 
 <div class="big">
@@ -40,13 +39,14 @@
     </label>
     <textarea bind:value={text} id="message" rows="12" name="message" />
     <div class="buttonContainer">
-      <button class="bigButton" type = "submit">Send</button>
+      <button class="bigButton" type="submit">Send</button>
     </div>
   </form>
 </div>
 
 <style>
-  div,form {
+  div,
+  form {
     display: flex;
     flex-direction: column;
   }
