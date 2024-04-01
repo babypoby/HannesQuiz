@@ -38,7 +38,7 @@
   }
 
   path {
-    stroke: rgb(191, 191, 191);
+    stroke: rgb(133, 133, 133);
   }
 
   button:hover path {

@@ -28,6 +28,19 @@
 
     return () => data.subscription.unsubscribe();
   });
+
+  onMount(async() => {
+    const {error, data: user} = await data.supabase.auth.getSession();
+    if (error) {
+      console.error("error", error);
+      return;
+    }
+    console.log(user);
+    if (!user.session) {
+      console.log("no user");
+      goto("/auth");
+    }
+  });
 </script>
 
 <main>

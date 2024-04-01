@@ -1,7 +1,8 @@
-<script>
+<script lang="ts">
   import { onDestroy, onMount } from "svelte";
   import { fade } from "svelte/transition";
   import { goto, beforeNavigate } from "$app/navigation";
+
 
   export let data;
   let photos = data.photosMap;
@@ -23,6 +24,9 @@
   beforeNavigate(() => {
     document.body.classList.remove("backgroundYellow");
   });
+  
+  
+
 </script>
 
 <h1 class={titleClass}>The Hannes Quiz</h1>
@@ -123,16 +127,15 @@
 
   @font-face {
     font-family: "Sail";
-    src: url("./src/Sail/Sail-Regular.ttf") format("truetype");
+    src: url($lib/assets/Sail/Sail-Regular.ttf) format("truetype");
   }
   @font-face {
     font-family: "Rubik";
-    src: url("./src/Rubik_Doodle_Shadow 2/RubikDoodleShadow-Regular.ttf")
-      format("truetype");
+    src: url($lib/assets/Rubik_Doodle_Shadow/RubikDoodleShadow-Regular.ttf) format("truetype");
   }
 
   @font-face {
     font-family: "Gaegu";
-    src: url("./src/Gaegu/Gaegu-Regular.ttf") format("truetype");
+    src: url($lib/assets/Gaegu/Gaegu-Regular.ttf) format("truetype");
   }
 </style>
