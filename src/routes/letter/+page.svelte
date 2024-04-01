@@ -183,6 +183,6 @@
 
   @font-face {
     font-family: "DMMono";
-    src: url($lib/assets/DMMono/DMMono-Regular.ttf) format("truetype");
+    src: url($lib/assets/DM_Mono/DMMono-Regular.ttf) format("truetype");
   }
 </style>
